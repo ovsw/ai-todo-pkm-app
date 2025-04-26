@@ -1382,29 +1382,33 @@
       </div>
 
       <!-- Chat Content Area -->
-      <div class="flex-grow px-4 pt-4 space-y-4 overflow-y-auto pb-24"> <!-- Padding for nav + input -->
-        <!-- AI Message -->
-        <div class="flex justify-start">
-          <div class="max-w-[75%] bg-gray-200/80 p-3 rounded-lg rounded-bl-none shadow-sm">
-            <p class="text-sm text-black">Hello! How can I assist you today?</p>
-          </div>
-        </div>
-        <!-- User Message -->
-        <div class="flex justify-end">
-           <div class="max-w-[75%] bg-blue-500 p-3 rounded-lg rounded-br-none shadow-sm text-white">
-            <p class="text-sm">Remind me to schedule a meeting with Design tomorrow.</p>
-          </div>
-        </div>
-         <!-- AI Message -->
-        <div class="flex justify-start">
-          <div class="max-w-[75%] bg-gray-200/80 p-3 rounded-lg rounded-bl-none shadow-sm">
-            <p class="text-sm text-black">Okay, I've created the task: "Schedule meeting with Design" due tomorrow.</p>
-          </div>
-        </div>
-      </div>
+      <div class="flex-grow flex flex-col px-6 pt-4 pb-24"> <!-- Made parent a flex column -->
 
-      <!-- Input Bar Area (Similar to Page 1, added Mic button) -->
-       <div class="p-3 border-t border-gray-200/50 bg-white/70 backdrop-blur-sm">
+        <!-- Message List Wrapper -->
+        <div class="flex-grow space-y-4 overflow-y-auto pr-2"> <!-- Wrapper takes space and scrolls -->
+
+          <!-- AI Message -->
+          <div class="flex justify-start">
+            <div class="max-w-[75%] bg-gray-200/80 p-3 rounded-lg rounded-bl-none shadow-sm">
+              <p class="text-sm text-black">Hello! How can I assist you today?</p>
+            </div>
+          </div>
+          <!-- User Message -->
+          <div class="flex justify-end">
+             <div class="max-w-[75%] bg-blue-500 p-3 rounded-lg rounded-br-none shadow-sm text-white">
+              <p class="text-sm">Remind me to schedule a meeting with Design tomorrow.</p>
+            </div>
+          </div>
+           <!-- AI Message -->
+          <div class="flex justify-start">
+            <div class="max-w-[75%] bg-gray-200/80 p-3 rounded-lg rounded-bl-none shadow-sm">
+              <p class="text-sm text-black">Okay, I've created the task: "Schedule meeting with Design" due tomorrow.</p>
+            </div>
+          </div>
+        </div> <!-- Close Message List Wrapper -->
+
+        <!-- Input Bar Area (Similar to Page 1, added Mic button) -->
+        <div class="pt-4 flex-shrink-0">
           <div class="flex items-end space-x-2"> <!-- items-end to align buttons with bottom of textarea -->
               <textarea placeholder="Type your message..." rows="1" class="flex-grow px-4 py-2 text-sm text-black bg-gray-100/80 border border-transparent rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-300 placeholder-gray-500 resize-none overflow-hidden" style="max-height: 120px; min-height: 40px; line-height: 1.5rem;" oninput="this.style.height = 'auto'; this.style.height = Math.min(this.scrollHeight, 120) + 'px';" ></textarea>
               <button class="p-2 text-gray-600 hover:text-teal-600 transition rounded-full flex-shrink-0" title="Voice Input">
@@ -1418,6 +1422,8 @@
                   </svg>
               </button>
           </div>
+        </div>
+
       </div>
 
       <!-- Bottom Navigation -->
