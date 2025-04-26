@@ -620,7 +620,6 @@
                 d="M221.87 83.16A104.1 104.1 0 1 1 195.67 49l22.67-22.68a8 8 0 0 1 11.32 11.32l-96 96a8 8 0 0 1-11.32-11.32l27.72-27.72a40 40 0 1 0 17.87 31.09a8 8 0 1 1 16-.9a56 56 0 1 1-22.38-41.65l22.75-22.75a87.88 87.88 0 1 0 23.13 29.67a8 8 0 0 1 14.44-6.9"
               ></path>
             </svg>
-
             <span class="text-xs font-medium mt-1">Projects</span>
           </button>
         </div>
@@ -1352,6 +1351,109 @@
           </button>
         </div>
       </div>
-    </div>
+    </div> <!-- This closes mobile-frame for Page 4 -->
+
+    <!-- Page 5: AI Chat Screen -->
+    <div
+      class="mobile-frame flex-shrink-0 rounded-3xl bg-gradient-to-br from-emerald-100 via-teal-100 to-cyan-100 flex flex-col text-content" <!-- Green/Teal gradient -->
+    >
+      <!-- Header -->
+      <div class="px-6 pt-10 pb-4 flex justify-between items-center">
+        <div>
+          <p class="text-sm text-gray-600">Chat with your AI</p>
+          <h1 class="text-2xl font-bold text-black">AI Assistant</h1>
+        </div>
+        <div class="flex space-x-3">
+          <button class="p-2 text-gray-700 hover:text-black transition">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+          </button>
+          <button class="p-2 text-gray-700 hover:text-black transition relative">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+            </svg>
+            <span class="absolute top-0 right-0 block h-4 w-4 transform translate-x-1/2 -translate-y-1/2 rounded-full bg-red-500 text-white text-xs flex items-center justify-center">3</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Chat Content Area -->
+      <div class="flex-grow px-4 pt-4 space-y-4 overflow-y-auto pb-24"> <!-- Padding for nav + input -->
+        <!-- AI Message -->
+        <div class="flex justify-start">
+          <div class="max-w-[75%] bg-gray-200/80 p-3 rounded-lg rounded-bl-none shadow-sm">
+            <p class="text-sm text-black">Hello! How can I assist you today?</p>
+          </div>
+        </div>
+        <!-- User Message -->
+        <div class="flex justify-end">
+           <div class="max-w-[75%] bg-blue-500 p-3 rounded-lg rounded-br-none shadow-sm text-white">
+            <p class="text-sm">Remind me to schedule a meeting with Design tomorrow.</p>
+          </div>
+        </div>
+         <!-- AI Message -->
+        <div class="flex justify-start">
+          <div class="max-w-[75%] bg-gray-200/80 p-3 rounded-lg rounded-bl-none shadow-sm">
+            <p class="text-sm text-black">Okay, I've created the task: "Schedule meeting with Design" due tomorrow.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Bar Area (Similar to Page 1, added Mic button) -->
+       <div class="p-3 border-t border-gray-200/50 bg-white/70 backdrop-blur-sm">
+          <div class="flex items-end space-x-2"> <!-- items-end to align buttons with bottom of textarea -->
+              <textarea placeholder="Type your message..." rows="1" class="flex-grow px-4 py-2 text-sm text-black bg-gray-100/80 border border-transparent rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-300 placeholder-gray-500 resize-none overflow-hidden" style="max-height: 120px; min-height: 40px; line-height: 1.5rem;" oninput="this.style.height = 'auto'; this.style.height = Math.min(this.scrollHeight, 120) + 'px';" ></textarea>
+              <button class="p-2 text-gray-600 hover:text-teal-600 transition rounded-full flex-shrink-0" title="Voice Input">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />
+                  </svg>
+              </button>
+               <button class="p-3 bg-gradient-to-br from-teal-500 to-cyan-600 text-white rounded-xl hover:opacity-90 transition duration-150 shadow-md flex-shrink-0" title="Send Message">
+                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+                  </svg>
+              </button>
+          </div>
+      </div>
+
+      <!-- Bottom Navigation -->
+      <div class="absolute bottom-0 left-0 right-0 h-20 bg-white/70 backdrop-blur-md border-t border-gray-200/60 rounded-b-3xl">
+        <div class="flex justify-around items-center h-full px-4">
+          <button class="flex flex-col items-center text-gray-500 hover:text-black transition">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            </svg>
+            <span class="text-xs font-medium mt-1">Home</span>
+          </button>
+          <button class="flex flex-col items-center text-gray-500 hover:text-black transition">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="w-6 h-6" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M22 5.18L10.59 16.6l-4.24-4.24l1.41-1.41l2.83 2.83l10-10zm-2.21 5.04c.13.57.21 1.17.21 1.78c0 4.42-3.58 8-8 8s-8-3.58-8-8s3.58-8 8-8c1.58 0 3.04.46 4.28 1.25l1.44-1.44A9.9 9.9 0 0 0 12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10c0-1.19-.22-2.33-.6-3.39z"></path>
+            </svg>
+            <span class="text-xs font-medium mt-1">Tasks</span>
+          </button>
+          <div class="w-1/5 flex justify-center">
+            <button class="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full text-white shadow-lg hover:opacity-90 transition transform -translate-y-4">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="w-7 h-7" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-5l-5 3v-3H6a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3zM9.5 9h.01m4.99 0h.01"></path><path d="M9.5 13a3.5 3.5 0 0 0 5 0"></path></g>
+              </svg>
+            </button>
+          </div>
+          <button class="flex flex-col items-center text-gray-500 hover:text-black transition">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="w-6 h-6" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
+              <path fill="currentColor" d="M19 10h7v2h-7zm0 5h7v2h-7zm0 5h7v2h-7z"></path><path fill="currentColor" d="M28 5H4a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h24a2.003 2.003 0 0 0 2-2V7a2 2 0 0 0-2-2M4 7h11v18H4Zm13 18V7h11l.002 18Z"></path>
+            </svg>
+            <span class="text-xs font-medium mt-1">Notes</span>
+          </button>
+          <button class="flex flex-col items-center text-gray-500 hover:text-black transition">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="w-6 h-6" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256">
+              <path fill="currentColor" d="M221.87 83.16A104.1 104.1 0 1 1 195.67 49l22.67-22.68a8 8 0 0 1 11.32 11.32l-96 96a8 8 0 0 1-11.32-11.32l27.72-27.72a40 40 0 1 0 17.87 31.09a8 8 0 1 1 16-.9a56 56 0 1 1-22.38-41.65l22.75-22.75a87.88 87.88 0 1 0 23.13 29.67a8 8 0 0 1 14.44-6.9"></path>
+            </svg>
+            <span class="text-xs font-medium mt-1">Projects</span>
+          </button>
+        </div>
+      </div>
+    </div> <!-- This closes mobile-frame for Page 5 -->
+
   </body>
 </html>
