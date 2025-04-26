@@ -681,6 +681,79 @@
 
       <!-- Content Area -->
       <div class="flex-grow px-6 pt-4 space-y-5 overflow-y-auto pb-24">
+        <!-- Right-aligned Project Filter Dropdown -->
+        <div class="flex justify-end mb-4">
+          <div class="relative inline-block text-left">
+            <div>
+              <button
+                type="button"
+                class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white/80 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300/50 hover:bg-gray-50/90"
+                id="menu-button-tasks"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                All Projects
+                <svg
+                  class="-mr-1 h-5 w-5 text-gray-400"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.29a.75.75 0 01.02-1.06z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Dropdown menu - Hidden by default -->
+            <div
+              class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="menu-button-tasks"
+              tabindex="-1"
+            >
+              <div class="py-1" role="none">
+                <a
+                  href="#"
+                  class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 bg-gray-100 font-semibold"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="menu-item-0-tasks"
+                  >All Projects</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="menu-item-1-tasks"
+                  >Work</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="menu-item-2-tasks"
+                  >Personal</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="menu-item-3-tasks"
+                  >Side Hustle</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Today Section -->
         <div class="space-y-2">
           <h2 class="text-sm font-semibold text-gray-500 mb-2">Today</h2>
@@ -950,8 +1023,81 @@
 
       <!-- Content Area - Timeline Implementation -->
       <div class="flex-grow px-6 pt-4 space-y-3 overflow-y-auto pb-24 relative">
+        <!-- Right-aligned Project Filter Dropdown -->
+        <div class="flex justify-end mb-4">
+          <div class="relative inline-block text-left">
+            <div>
+              <button
+                type="button"
+                class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white/80 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300/50 hover:bg-gray-50/90"
+                id="menu-button-notes"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                All Projects
+                <svg
+                  class="-mr-1 h-5 w-5 text-gray-400"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.29a.75.75 0 01.02-1.06z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Dropdown menu - Hidden by default -->
+            <div
+              class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="menu-button-notes"
+              tabindex="-1"
+            >
+              <div class="py-1" role="none">
+                <a
+                  href="#"
+                  class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 bg-gray-100 font-semibold"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="menu-item-0-notes"
+                  >All Projects</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="menu-item-1-notes"
+                  >Work</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="menu-item-2-notes"
+                  >Personal</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="menu-item-3-notes"
+                  >Side Hustle</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Vertical Timeline Line -->
-        <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-300"></div>
+        <div class="absolute left-8 top-16 bottom-0 w-0.5 bg-gray-300"></div>
 
         <!-- Timeline Groups -->
         <div class="relative pl-6 space-y-4">
