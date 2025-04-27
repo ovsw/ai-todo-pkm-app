@@ -1,13 +1,7 @@
 "use client";
-import { DesktopSidebar } from "@/components/layout/DesktopSideBar";
-
 import { useState } from "react";
-import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
-import { Bars3Icon, BellIcon } from "@heroicons/react/24/outline";
-import {
-  ChevronDownIcon,
-  MagnifyingGlassIcon,
-} from "@heroicons/react/20/solid";
+
+import { DesktopSidebar } from "@/components/layout/DesktopSideBar";
 import { MobileSidebar } from "./layout/MobileSidebar";
 import { TopBar } from "./layout/TopBar";
 

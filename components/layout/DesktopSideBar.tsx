@@ -1,4 +1,5 @@
 // components/layout/DesktopSidebar.tsx
+import Image from "next/image";
 import { cn } from "@/lib/utils"; // Assuming you have a utility for classNames
 import { mainNavigation } from "@/data/navigationData";
 
@@ -6,10 +7,12 @@ export function DesktopSidebar() {
   return (
     <div className="hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-50 lg:block lg:w-20 lg:overflow-y-auto lg:bg-gray-900 lg:pb-4">
       <div className="flex h-16 shrink-0 items-center justify-center">
-        <img
+        <Image
           alt="Alexander AI"
           src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
           className="h-8 w-auto"
+          width={24}
+          height={24}
         />
       </div>
       <nav className="mt-8">

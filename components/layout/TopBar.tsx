@@ -6,7 +6,6 @@ import {
 } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import { userNavigation } from "@/data/navigationData"; // Import userNavigation
-import { cn } from "@/lib/utils"; // Assuming cn utility is here
 
 // Define props needed from the parent
 type TopBarProps = {
