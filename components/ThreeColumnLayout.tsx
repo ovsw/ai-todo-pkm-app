@@ -1,29 +1,9 @@
 "use client";
 import { DesktopSidebar } from "@/components/layout/DesktopSideBar";
-import { cn } from "@/lib/utils";
 
 import { useState } from "react";
-import {
-  Dialog,
-  DialogBackdrop,
-  DialogPanel,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
-  TransitionChild,
-} from "@headlessui/react";
-import {
-  CheckBadgeIcon,
-  Bars3Icon,
-  BellIcon,
-  InboxArrowDownIcon,
-  ChatBubbleBottomCenterTextIcon,
-  DocumentDuplicateIcon,
-  HomeIcon,
-  FolderOpenIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import { Bars3Icon, BellIcon } from "@heroicons/react/24/outline";
 import {
   ChevronDownIcon,
   MagnifyingGlassIcon,

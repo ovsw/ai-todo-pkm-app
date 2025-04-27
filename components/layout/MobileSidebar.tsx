@@ -4,15 +4,7 @@ import {
   DialogPanel,
   TransitionChild,
 } from "@headlessui/react";
-import {
-  XMarkIcon,
-  HomeIcon,
-  InboxArrowDownIcon,
-  ChatBubbleBottomCenterTextIcon,
-  CheckBadgeIcon,
-  DocumentDuplicateIcon,
-  FolderOpenIcon,
-} from "@heroicons/react/24/outline"; // Keep Heroicons for now
+import { XMarkIcon } from "@heroicons/react/24/outline"; // Keep Heroicons for now
 import { mainNavigation } from "@/data/navigationData"; // Assuming navigation data is here
 import { cn } from "@/lib/utils"; // Assuming cn utility is here
 import Image from "next/image"; // Use Next.js Image component

@@ -1,17 +1,6 @@
 // components/layout/DesktopSidebar.tsx
 import { cn } from "@/lib/utils"; // Assuming you have a utility for classNames
 import { mainNavigation } from "@/data/navigationData";
-import {
-  CheckBadgeIcon,
-  Bars3Icon,
-  BellIcon,
-  InboxArrowDownIcon,
-  ChatBubbleBottomCenterTextIcon,
-  DocumentDuplicateIcon,
-  HomeIcon,
-  FolderOpenIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
 
 export function DesktopSidebar() {
   return (
