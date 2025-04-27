@@ -4,6 +4,7 @@ import { useState } from "react";
 import { DesktopSidebar } from "@/components/layout/DesktopSideBar";
 import { MobileSidebar } from "./layout/MobileSidebar";
 import { TopBar } from "./layout/TopBar";
+import { SecondaryColumn } from "./layout/SecondaryColumn";
 
 type ThreeColumnLayoutProps = {
   children?: React.ReactNode; // For wrapping content if needed
@@ -35,9 +36,7 @@ export default function ThreeColumnLayout({
           </main>
         </div>
 
-        <aside className="fixed top-16 bottom-0 left-20 hidden w-96 overflow-y-auto border-r border-gray-200 px-4 py-6 sm:px-6 lg:px-8 xl:block">
-          {/* CHAT - Secondary column (hidden on smaller screens) */}
-        </aside>
+        <SecondaryColumn />
       </div>
     </>
   );
