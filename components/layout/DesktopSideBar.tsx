@@ -1,5 +1,6 @@
 // components/layout/DesktopSidebar.tsx
 import { cn } from "@/lib/utils"; // Assuming you have a utility for classNames
+import { mainNavigation } from "@/data/navigationData";
 import {
   CheckBadgeIcon,
   Bars3Icon,
@@ -12,20 +13,6 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
-// Move the 'navigation' array here or import it from a shared location
-const navigation = [
-  { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
-  { name: "Capture", href: "#", icon: InboxArrowDownIcon, current: false },
-  {
-    name: "Chat",
-    href: "#",
-    icon: ChatBubbleBottomCenterTextIcon,
-    current: false,
-  },
-  { name: "Tasks", href: "#", icon: CheckBadgeIcon, current: false },
-  { name: "Notes", href: "#", icon: DocumentDuplicateIcon, current: false },
-  { name: "Projects", href: "#", icon: FolderOpenIcon, current: false },
-];
 export function DesktopSidebar() {
   return (
     <div className="hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-50 lg:block lg:w-20 lg:overflow-y-auto lg:bg-gray-900 lg:pb-4">
@@ -38,7 +25,7 @@ export function DesktopSidebar() {
       </div>
       <nav className="mt-8">
         <ul role="list" className="flex flex-col items-center space-y-1">
-          {navigation.map((item) => (
+          {mainNavigation.map((item) => (
             <li key={item.name}>
               <a
                 href={item.href}
