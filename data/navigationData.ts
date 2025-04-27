@@ -34,3 +34,15 @@ export const mainNavigation: NavigationItem[] = [
   { name: "Notes", href: "#", icon: DocumentDuplicateIcon, current: false },
   { name: "Projects", href: "#", icon: FolderOpenIcon, current: false },
 ];
+
+// Define the type for user navigation items
+export type UserNavigationItem = {
+  name: string;
+  href: string;
+};
+
+// Export the user navigation array
+export const userNavigation: UserNavigationItem[] = [
+  { name: "Your profile", href: "#" },
+  { name: "Sign out", href: "#" },
+];

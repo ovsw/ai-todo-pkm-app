@@ -1,13 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  remotePatterns: [
-    {
-      protocol: "https",
-      hostname: "tailwindcss.com",
-    },
-  ],
+  images: {
+    domains: ["images.unsplash.com", "tailwindcss.com"],
+  },
 };
 
 export default nextConfig;
