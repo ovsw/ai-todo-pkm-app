@@ -1,12 +1,11 @@
 import {
   HomeIcon,
-  InboxArrowDownIcon,
-  ChatBubbleBottomCenterTextIcon,
-  CheckBadgeIcon,
-  DocumentDuplicateIcon,
-  FolderOpenIcon,
-} from "@heroicons/react/24/outline"; // Or switch to Lucide icons later
-
+  InboxIcon as CaptureIcon,
+  BotMessageSquare as ChatIcon,
+  CircleCheck as TasksIcon,
+  NotepadText as NotesIcon,
+  Target as ProjectIcon,
+} from "lucide-react";
 // Define the type for a navigation item
 export type NavigationItem = {
   name: string;
@@ -23,16 +22,16 @@ export type NavigationItem = {
 // Export the navigation array
 export const mainNavigation: NavigationItem[] = [
   { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
-  { name: "Capture", href: "#", icon: InboxArrowDownIcon, current: false },
+  { name: "Capture", href: "#", icon: CaptureIcon, current: false },
   {
     name: "Chat",
     href: "#",
-    icon: ChatBubbleBottomCenterTextIcon,
+    icon: ChatIcon,
     current: false,
   },
-  { name: "Tasks", href: "#", icon: CheckBadgeIcon, current: false },
-  { name: "Notes", href: "#", icon: DocumentDuplicateIcon, current: false },
-  { name: "Projects", href: "#", icon: FolderOpenIcon, current: false },
+  { name: "Tasks", href: "#", icon: TasksIcon, current: false },
+  { name: "Notes", href: "#", icon: NotesIcon, current: false },
+  { name: "Projects", href: "#", icon: ProjectIcon, current: false },
 ];
 
 // Define the type for user navigation items

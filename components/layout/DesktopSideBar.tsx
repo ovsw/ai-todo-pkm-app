@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils"; // Assuming you have a utility for classNames
 import { mainNavigation } from "@/data/navigationData";
+import { Button } from "@/components/ui/button";
 
 export function DesktopSidebar() {
   return (
@@ -16,21 +17,24 @@ export function DesktopSidebar() {
         />
       </div>
       <nav className="mt-8">
-        <ul role="list" className="flex flex-col items-center space-y-1">
+        <ul role="list" className="flex flex-col items-center space-y-4">
           {mainNavigation.map((item) => (
             <li key={item.name}>
-              <a
-                href={item.href}
+              {/* If you want it to act as a link, you might wrap it in <Link> from next/link href={item.href} */}
+              {/*  <Link href={item.href} passHref> ... </Link> // Option 1 */}
+              <Button
+                aria-label={item.name}
+                variant="ghost"
+                size="icon"
                 className={cn(
                   item.current
                     ? "bg-gray-800 text-white"
                     : "text-gray-400 hover:bg-gray-800 hover:text-white",
-                  "group flex gap-x-3 rounded-md p-3 text-sm/6 font-semibold"
+                  "group size-10 p-3"
                 )}
               >
                 <item.icon aria-hidden="true" className="size-6 shrink-0" />
-                <span className="sr-only">{item.name}</span>
-              </a>
+              </Button>
             </li>
           ))}
         </ul>
