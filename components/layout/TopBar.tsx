@@ -1,5 +1,7 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
-import { Bars3Icon, BellIcon } from "@heroicons/react/24/outline";
+import { Button } from "@/components/ui/button";
+import { Bars3Icon } from "@heroicons/react/24/outline";
+import { Bell } from "lucide-react";
 import {
   ChevronDownIcon,
   MagnifyingGlassIcon,
@@ -52,13 +54,14 @@ export function TopBar({ onMobileMenuOpen }: TopBarProps) {
 
         <div className="flex items-center gap-x-4 lg:gap-x-6">
           {/* Notification Button */}
-          <button
-            type="button"
-            className="-m-2.5 p-2.5 text-gray-400 hover:text-gray-500"
+          <Button
+            aria-label="View notifications"
+            variant="ghost"
+            size="icon"
+            className="text-gray-400 hover:text-gray-500"
           >
-            <span className="sr-only">View notifications</span>
-            <BellIcon aria-hidden="true" className="size-6" />
-          </button>
+            <Bell aria-hidden="true" className="size-6" />
+          </Button>
 
           {/* Separator */}
           <div
