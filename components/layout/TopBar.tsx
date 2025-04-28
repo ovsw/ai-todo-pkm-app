@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Bell, Menu as MenuIcon, ChevronDownIcon, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { Separator } from "@/components/ui/separator";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -30,10 +31,9 @@ export function TopBar({ onMobileMenuOpen }: TopBarProps) {
       </Button>
 
       {/* Separator */}
-      <div
-        aria-hidden="true"
-        className="h-6 w-px bg-gray-900/10 lg:hidden" // Adjusted separator color based on typical Tailwind UI
-      />
+      <div className="lg:hidden h-6">
+        <Separator orientation="vertical" />
+      </div>
 
       <div className="flex flex-1 gap-x-4 self-stretch lg:gap-x-6">
         {/* Search Form */}
@@ -65,11 +65,9 @@ export function TopBar({ onMobileMenuOpen }: TopBarProps) {
             <Bell aria-hidden="true" className="size-6" />
           </Button>
 
-          {/* Separator */}
-          <div
-            aria-hidden="true"
-            className="hidden lg:block lg:h-6 lg:w-px lg:bg-gray-900/10"
-          />
+          <div className="hidden lg:block lg:h-6">
+            <Separator orientation="vertical" />
+          </div>
 
           {/* Profile dropdown */}
           <DropdownMenu>
