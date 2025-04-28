@@ -19,13 +19,14 @@ export default function ThreeColumnLayout({
     <>
       <div>
         <MobileSidebar
-          sidebarOpen={sidebarOpen}
-          setSidebarOpen={setSidebarOpen}
+          sidebarOpen={sidebarOpen} // prop needed so that it knows if it should be open
+          setSidebarOpen={setSidebarOpen} //prop needed to close the sidebar once it's open
         />
 
         <DesktopSidebar />
 
         <div className="lg:pl-20">
+          {/* prop needed to open the mobile sidebar */}
           <TopBar onMobileMenuOpen={() => setSidebarOpen(true)} />
 
           <main className="xl:pl-96">
