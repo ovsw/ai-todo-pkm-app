@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Bell, Menu as MenuIcon, ChevronDownIcon } from "lucide-react";
+import { Bell, Menu as MenuIcon, ChevronDownIcon, Search } from "lucide-react";
+import { Input } from "@/components/ui/input";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import { userNavigation } from "@/data/navigationData"; // Import userNavigation
 
 // Define props needed from the parent
@@ -37,21 +37,21 @@ export function TopBar({ onMobileMenuOpen }: TopBarProps) {
 
       <div className="flex flex-1 gap-x-4 self-stretch lg:gap-x-6">
         {/* Search Form */}
+
         <form action="#" method="GET" className="relative flex flex-1">
           <label htmlFor="search-field" className="sr-only">
             Search
           </label>
-          <MagnifyingGlassIcon
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-y-0 left-0 h-full w-5 text-gray-400"
-          />
-          <input
-            id="search-field"
-            name="search"
-            type="search"
-            placeholder="Search..."
-            className="block h-full w-full border-0 py-0 pl-8 pr-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm"
-          />
+
+          <div className="relative w-full py-3.5">
+            <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+            <Input
+              type=""
+              placeholder="Search..."
+              name="search"
+              className="h-full w-full border-0 py-0 pl-8 pr-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm"
+            />
+          </div>
         </form>
 
         <div className="flex items-center gap-x-4 lg:gap-x-6">
