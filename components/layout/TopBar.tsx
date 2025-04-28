@@ -1,11 +1,13 @@
-import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { Button } from "@/components/ui/button";
-import { Bell, Menu as MenuIcon } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Bell, Menu as MenuIcon, ChevronDownIcon } from "lucide-react";
 import {
-  ChevronDownIcon,
-  MagnifyingGlassIcon,
-} from "@heroicons/react/20/solid";
-import Image from "next/image";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import { userNavigation } from "@/data/navigationData"; // Import userNavigation
 
 // Define props needed from the parent
@@ -70,47 +72,30 @@ export function TopBar({ onMobileMenuOpen }: TopBarProps) {
           />
 
           {/* Profile dropdown */}
-          <Menu as="div" className="relative">
-            <MenuButton className="-m-1.5 flex items-center p-1.5">
-              <span className="sr-only">Open user menu</span>
-              {/* Consider replacing with Shadcn Avatar later */}
-              <Image
-                width={32} // Add appropriate dimensions
-                height={32}
-                alt=""
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                className="size-8 rounded-full bg-gray-50"
-              />
-              <span className="hidden lg:flex lg:items-center">
-                <span
-                  aria-hidden="true"
-                  className="ml-4 text-sm/6 font-semibold text-gray-900"
-                >
-                  Tom Cook {/* Replace with dynamic user name later */}
-                </span>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button
+                aria-label="Open user menu"
+                variant="link"
+                className="-m-1.5  p-1.5 font-semibold"
+              >
+                <Avatar className="mr-1">
+                  <AvatarImage src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+                Ovi Savescu
                 <ChevronDownIcon
                   aria-hidden="true"
-                  className="ml-2 size-5 text-gray-400"
+                  className="ml-1 size-5 text-gray-400"
                 />
-              </span>
-            </MenuButton>
-            {/* Consider replacing with Shadcn DropdownMenu later */}
-            <MenuItems
-              transition
-              className="absolute right-0 z-10 mt-2.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[enter]:ease-out data-[leave]:duration-75 data-[leave]:ease-in"
-            >
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-36">
               {userNavigation.map((item) => (
-                <MenuItem key={item.name}>
-                  <a
-                    href={item.href}
-                    className="block px-3 py-1 text-sm/6 leading-6 text-gray-900 data-[focus]:bg-gray-50"
-                  >
-                    {item.name}
-                  </a>
-                </MenuItem>
+                <DropdownMenuItem key={item.name}>{item.name}</DropdownMenuItem>
               ))}
-            </MenuItems>
-          </Menu>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
     </div>
