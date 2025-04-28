@@ -1,7 +1,6 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { Button } from "@/components/ui/button";
-import { Bars3Icon } from "@heroicons/react/24/outline";
-import { Bell } from "lucide-react";
+import { Bell, Menu as MenuIcon } from "lucide-react";
 import {
   ChevronDownIcon,
   MagnifyingGlassIcon,
@@ -18,14 +17,15 @@ export function TopBar({ onMobileMenuOpen }: TopBarProps) {
   return (
     <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-gray-200 bg-white px-4 shadow-xs sm:gap-x-6 sm:px-6 lg:px-8">
       {/* Mobile menu button */}
-      <button
-        type="button"
+      <Button
         onClick={onMobileMenuOpen} // Use the prop here
-        className="-m-2.5 p-2.5 text-gray-700 lg:hidden"
+        aria-label="Open sidebar"
+        className="text-gray-700 lg:hidden"
+        variant="ghost"
+        size="icon"
       >
-        <span className="sr-only">Open sidebar</span>
-        <Bars3Icon aria-hidden="true" className="size-6" />
-      </button>
+        <MenuIcon aria-hidden="true" className="size-6" />
+      </Button>
 
       {/* Separator */}
       <div
