@@ -56,7 +56,7 @@ export function MobileSidebar({
                 width={32} // Example width
                 height={32} // Example height
                 alt="Your Company"
-                src="https://tailwindcss.com/img/logos/mark.svg?color=indigo&shade=500"
+                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
                 className="h-8 w-auto"
               />
             </div>
